@@ -1,0 +1,600 @@
+/*
+body {
+    margin: 0;
+    padding: 0;
+}
+i.fa-solid.fa-plus.fa-style {
+    font-size: 18px;
+    color: black;
+}
+i.fa-solid.fa-minus.fa-style {
+    font-size: 18px;
+    color: black;
+}
+i.fa-solid.fa-plus.fa-style:hover {
+    color: mediumvioletred;
+}
+i.fa-solid.fa-minus.fa-style:hover {
+    color: mediumvioletred;
+}
+
+.wrapper_chitiet {
+      height: auto;
+      width: 100%;
+      margin: 0 auto;
+}
+.hinhanh_sanpham {
+    float: left;
+    width: 40%;
+    height: auto;
+}
+chitiet_sanpham {
+    float: right;
+    width: 30%;
+    margin: 0 10px;
+}
+input.add_shopping_cart {
+    border: none;
+    background: #e91c1c;
+    color: #ddd;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.header {
+    background-image: url("/web1/images/banner/banner1.jpg");
+    background-repeat: repeat-x;
+    background-size: 100% 180px;
+    border: 1px solid #cc3399;
+    height: 180px;
+    width: 100%;
+}
+#main {
+    height: auto;
+    width: 100%;
+    background: white;
+}   
+ul.list_siderbar{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+ul.list_siderbar li {
+    padding: 4px;
+    margin:20px 5px 20px 5px;
+}
+ul.list_siderbar li:hover {
+    background: #8ac71a;
+}
+ul.list_siderbar li a{
+    text-decoration: none;
+    display: block;
+    color: rgb(51, 25, 165);
+}
+.main_content {
+    height: auto;
+    width: 100%;
+    float: right;
+    margin-top: 30px;
+}
+ul.list_trang {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.list_trang li {
+    margin: 5px;
+    padding: 5px 13px;
+    background:bisque;
+    float: left;
+    display: block;
+}
+ul.list_trang li a {
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+ Điều chỉnh tiêu đề sản phẩm 
+p.title_product {
+    display: -webkit-box;  Đặt thành hộp linh hoạt để hỗ trợ cắt dòng 
+    -webkit-box-orient: vertical; /* Hướng của hộp (chiều dọc) 
+    -webkit-line-clamp: 2; /* Hiển thị tối đa 2 dòng 
+    overflow: hidden; /* Ẩn nội dung vượt quá 
+    text-overflow: ellipsis; /* Thêm "..." nếu bị cắt 
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+}
+h4{
+    margin-top: 30px;
+}
+h3 {
+    text-align: center; 
+    text-transform: uppercase;
+}
+span{
+    text-align: center; 
+}
+/* Hiệu ứng hover cho tiêu đề 
+p.title_product:hover {
+    color: red; /* Thay đổi màu chữ thành đỏ khi hover 
+}
+
+/* Loại bỏ gạch chân cho link bao quanh 
+.row .col-md-3 a {
+    text-decoration: none; /* Loại bỏ gạch chân 
+}
+.row .col-md-3 {
+    border: 1px solid 	 #d6d6cb;
+}
+/* Loại bỏ gạch chân khi hover 
+.row .col-md-3 a:hover {
+    text-decoration: none;
+}
+
+/* Điều chỉnh giá sản phẩm 
+p.price_product {
+    text-align: center;
+    color: #e42525;
+    font-size: 16px;
+    font-weight: bold;
+}
+p.title_article {
+    color: revert;
+}
+/* menu 
+.navbar-custom {
+    background-color: mediumturquoise;
+}
+.form-control {
+    background-color: #f0f8ff; /* Nền xanh nhạt 
+    border-color: #ff5733; /* Viền cam 
+    color: #333; /* Màu chữ 
+}
+.form-control::placeholder {
+    color: #888; /* Màu chữ placeholder 
+}
+.form-control:focus {
+    border-color: #007bff; /* Viền xanh dương khi focus 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.btn-outline-success {
+    color: white;
+    background-color: #28a745; /* Màu xanh lá 
+    border-color: #28a745;
+}
+.btn-outline-success:hover {
+    background-color: #218838; /* Xanh lá đậm khi hover 
+    border-color: #1e7e34;
+}
+/* trang đăng ký  
+.error-list {
+    color: red;
+    margin-bottom: 15px;
+}
+.message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group button {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #0056b3;
+}
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+p a:hover {
+    text-decoration: underline;
+}
+
+.navbar-custom {
+    width: 100%;
+}
+/* css tin tức 
+
+.col-md-4 {
+    position: relative; /* Đặt để điều chỉnh ảnh con 
+}
+.col-md-3 {
+    position: relative; /* Đặt để điều chỉnh ảnh con 
+}
+.product-image {
+    width: 100%; /* Hình ảnh luôn chiếm toàn bộ chiều ngang 
+    height: auto; /* Duy trì tỷ lệ gốc 
+    object-fit: contain; /* Hiển thị toàn bộ ảnh mà không bị cắt 
+    object-fit: cover; /* Cắt hình để vừa với khung mà không méo 
+    aspect-ratio: 4 / 3; /* Đặt tỷ lệ khung hình (4:3 là phổ biến, tùy chỉnh nếu cần) 
+    border-radius: 5px; /* Tùy chọn bo góc 
+}
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các bài viết 
+    }
+    .col-md-3 {
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các bài viết 
+    }
+    .product-image {
+        aspect-ratio: 16 / 9; /* Thay đổi tỷ lệ khung hình cho thiết bị nhỏ hơn 
+    }
+}
+
+@media (max-width: 576px) {
+    .product-image {
+        aspect-ratio: 1 / 1; /* Hình vuông trên điện thoại 
+    }
+}
+.product-image-new {
+    width: 100%; /* Hình ảnh luôn chiếm toàn bộ chiều ngang 
+    height: auto; /* Duy trì tỷ lệ gốc 
+    object-fit: contain; /* Hiển thị toàn bộ ảnh mà không bị cắt 
+    aspect-ratio: 4 / 3; /* Đặt tỷ lệ khung hình (4:3 là phổ biến, tùy chỉnh nếu cần) 
+    border-radius: 5px; /* Tùy chọn bo góc 
+}
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các bài viết 
+    }
+    .col-md-3 {
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các bài viết 
+    }
+    .product-image-new {
+        aspect-ratio: 16 / 9; /* Thay đổi tỷ lệ khung hình cho thiết bị nhỏ hơn 
+    }
+}
+
+@media (max-width: 576px) {
+    .product-image-new {
+        aspect-ratio: 1 / 1; /* Hình vuông trên điện thoại 
+    }
+}
+
+
+.clear{
+    clear: both;
+}
+.footer {
+    border: 1px solid 	 #444386ff;
+    height: 150px;
+    width: 100%;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Đảm bảo logo thay đổi kích thước linh hoạt trên các thiết bị nhỏ
+.navbar-brand img {
+    max-width: 100%;  /* Logo có thể mở rộng tối đa 100% chiều rộng của navbar 
+    height: auto;     /* Duy trì tỉ lệ khung hình của logo 
+    max-height: 80px; /* Đặt chiều cao tối đa cho logo, có thể điều chỉnh cho phù hợp 
+}
+/* Tùy chỉnh logo nhỏ hơn khi màn hình có độ rộng dưới 768px (ví dụ: tablet) 
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 40px;  /* Logo sẽ nhỏ lại khi trên các thiết bị nhỏ hơn
+    }
+}
+
+/* Tùy chỉnh logo nhỏ hơn nữa khi màn hình có độ rộng dưới 480px (ví dụ: điện thoại)
+@media (max-width: 480px) {
+    .navbar-brand img {
+        max-height: 35px;  /* Logo sẽ còn nhỏ hơn nữa trên điện thoại
+    }
+}
+/* CSS cho phần "arrow-steps" 
+.arrow-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.arrow-steps .step {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 15px;
+    flex-grow: 1;
+    position: relative;
+    background-color: #e7edf8;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    margin: 5px;
+}
+
+.arrow-steps .step a {
+    text-decoration: none;
+    color: #444;
+}
+
+.arrow-steps .step.current {
+    color: #fff;
+    background-color: #3366cc;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-steps .step.done {
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+}
+
+.arrow-steps .step.done a {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .arrow-steps .step {
+        font-size: 12px;
+    }
+    .arrow-steps .step a {
+        font-size: 12px;
+    }
+}
+
+/* CSS cho bảng
+.table-responsive {
+    margin-top: 20px;
+}
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Thêm để cuộn mượt trên các thiết bị di động 
+}
+table {
+    width: 100%;
+    table-layout:fixed; /* Cố định chiều rộng cột để tránh bị tràn 
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    overflow: hidden;
+    word-wrap: break-word; /* Ngắt dòng khi gặp từ dài 
+    overflow: hidden;
+    white-space: normal; /* Cho phép nội dung ngắt dòng 
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td img {
+    width: 100px; /* Giới hạn kích thước hình ảnh 
+    height: auto;
+    object-fit: cover;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 8px;
+        font-size: 14px; /* Giảm kích thước font chữ trên màn hình nhỏ
+    }
+    td img {
+        width: 80px; /* Hình ảnh nhỏ lại trên màn hình nhỏ 
+    }
+}
+
+/* Responsive cho table khi màn hình rất nhỏ (mobile) 
+@media (max-width: 576px) {
+    table {
+        font-size: 12px; /* Giảm kích thước font 
+    }
+
+    th, td {
+        padding: 5px 2px; /* Giảm padding 
+    }
+
+    td img {
+        max-width: 80px; /* Hình ảnh nhỏ lại để vừa với cột 
+    }
+
+    /* Đảm bảo cột và nội dung không bị tràn ra ngoài 
+    th, td {
+        padding: 5px 2px;
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+    .arrow-steps {
+        flex-direction: column;
+    }
+
+    .arrow-steps .step {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+/* 
+.tabs {
+width: auto;
+background-color: mediumturquoise;
+border-radius: 5px 5px 5px 5px;
+}
+ul#tabs-nav {
+list-style: none;
+margin: 0;
+padding: 5px;
+overflow: auto;
+}
+ul#tabs-nav li {
+float: left;
+font-weight: bold;
+margin-right: 2px;
+padding: 8px 10px;
+border-radius: 5px 5px 5px 5px;
+cursor: pointer;
+}
+ul#tabs-nav li:hover,
+ul#tabs-nav li.active {
+background-color: rgb(66, 29, 161);
+}
+#tabs-nav li a {
+text-decoration: none;
+color: #FFF;
+}
+.tab-content {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang 
+    align-items: center;    /* Căn giữa theo chiều dọc 
+    height: auto;          /* Độ cao của khung (ở đây là chiều cao toàn màn hình) 
+    padding: 10px;
+    border: 5px solid rgb(66, 29, 161);
+    background-color: #FFF;
+}
+.tab-content img {
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước khung 
+    height: auto;
+}
+html {
+margin: 0;
+padding: 0;
+}
+body { 
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+} 
+/* General container styles 
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+/* Wrapper for alignment 
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Step container 
+.arrow-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+/* Styling each step 
+.arrow-steps .step {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+/* Styling the links within each step 
+.arrow-steps .step a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #f4f4f4;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Highlighting current step 
+.arrow-steps .step.current a {
+    background-color: #4caf50;
+    color: white;
+    font-weight: 600;
+}
+
+/* Hover effect 
+.arrow-steps .step a:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* Adding arrows between steps 
+.arrow-steps .step:after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    font-size: 24px;
+    color: #aaa;
+    transform: translateY(-50%);
+    visibility: visible;
+    transition: color 0.3s ease;
+}
+
+/* Remove the arrow on the last step 
+.arrow-steps .step:last-child:after {
+    visibility: hidden;
+}
+
+/* Responsiveness for mobile devices 
+@media (max-width: 768px) {
+    .arrow-steps {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    /* Styling steps for mobile view 
+    .arrow-steps .step {
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .arrow-steps .step:after {
+        content: none;
+    }
+
+    /* Mobile styling for current step 
+    .arrow-steps .step.current a {
+        background-color: #2196f3;
+    }
+
+    /* Adjusting spacing between steps on mobile 
+    .arrow-steps .step a {
+        padding: 12px 20px;
+    }
+}
+*/

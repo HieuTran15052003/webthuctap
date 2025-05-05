@@ -1,0 +1,328 @@
+:root {
+    --sidebar-width: 270px;
+    --primary-color: #1a1717;
+    --hover-color: #34495e;
+}
+button.btn.btn-primary {
+    margin-top: 8px;
+}
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.admin-sidebar .navbar-brand {
+    padding: 1.5rem 1rem;
+    color: #D10024;
+    font-size: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin_list li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin_list li a {
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.admin_list li a:hover {
+    background-color: var(--hover-color);
+    padding-left: 1.75rem;
+}
+
+.admin_list li a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content Styles */
+.admin-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .admin-content {
+        margin-left: 0;
+    }
+
+    .admin-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Custom Components */
+.stats-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+/* Đảm bảo bảng có thể cuộn ngang trên thiết bị nhỏ */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;  /* Đảm bảo cuộn mượt trên thiết bị iOS */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+input[type="text"], input[type="number"], input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.note {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+/* Các kiểu bảng */
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.table img {
+    max-height: auto;
+    object-fit: cover;
+}
+/* Tiêu đề chính */
+.title_ad {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #060d0e;
+}
+
+h3.title_ad.text-center.mt-3 {
+    margin: 0; /* Loại bỏ margin mặc định */
+    padding: 0; /* Khoảng cách bên trong */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều ngang */
+    text-align: center; /* Căn giữa nội dung */
+    border-bottom: 1px solid transparent; /* Ngăn margin collapsing */
+}
+h3.title_ad.text-center {
+    background: darkturquoise;
+}
+ul, ol {
+    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+}
+
+a {
+    text-decoration: none; /* Nếu muốn bỏ gạch dưới của liên kết */
+}
+/* Wrapper cho nội dung chính */
+
+
+a:hover {
+    text-decoration: underline;
+}
+input.fix_more {
+    background: darkturquoise;
+}
+/* Clearfix (dùng cho floating elements nếu cần) */
+.clear {
+    clear: both;
+}
+
+/* Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .col-md-3 {
+        min-height: auto; /* Bỏ chiều cao cố định */
+    }
+    input[type="text"], input[type="number"] {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    /* Đảm bảo các ô input có chiều rộng phù hợp */
+    td input[type="text"], td input[type="number"], td input[type="submit"] {
+        width: 100%;
+    }
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+    .col-md-3 a {
+        font-size: 1rem; /* Giảm kích thước chữ cho liên kết */
+        padding: 8px 10px; /* Giảm padding */
+    }
+
+    .content-wrapper {
+        padding: 10px; /* Giảm padding nội dung */
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        table-layout: auto; /* Để bảng tự động điều chỉnh các cột */
+    }
+
+    .table img {
+        max-width: 100px; /* Điều chỉnh hình ảnh nhỏ lại */
+        height: auto;
+    }
+
+    /* Đảm bảo các trường nhập liệu dễ sử dụng trên điện thoại */
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%; /* Đảm bảo các ô nhập liệu chiếm hết chiều rộng */
+        box-sizing: border-box;
+    }
+
+    /* Tối ưu hiển thị các nút quản lý */
+    .table td:last-child {
+        white-space: nowrap;
+    }
+
+    .table a {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 10px;
+    }
+
+    /* Đảm bảo bảng không bị quá tràn */
+    .table th, .table td {
+        white-space: normal; /* Cho phép các ô nội dung có thể xuống dòng */
+        word-wrap: break-word;
+    }
+
+    /* Đảm bảo tiêu đề bảng không bị tràn */
+    .table th {
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    /* Điều chỉnh font-size cho bảng */
+    .table td, .table th {
+        font-size: 0.9rem; /* Giảm kích thước chữ bảng trên thiết bị di động */
+    }
+}
+/*css danh mục sản phẩm*/
+.category-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.btn-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #1a1717; /* Màu đen đậm */
+    color: #D10024; /* Màu chữ */
+    border: none; /* Xóa viền */
+    border-radius: 5px; /* Bo góc */
+    font-size: 1rem; /* Kích thước chữ */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Hiệu ứng mượt */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+
+/* Tăng kích thước biểu tượng */
+.btn-add .icon-plus {
+    font-size: 1.2rem;
+    margin-right: 8px; /* Khoảng cách giữa biểu tượng và chữ */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover: đổi màu, phóng to biểu tượng */
+.btn-add:hover {
+    background-color: #34495e; /* Màu đỏ tươi khi hover */
+    color: #D10024; /* Màu chữ giữ nguyên */
+    transform: translateY(-2px); /* Hiệu ứng nhấn */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Tăng đổ bóng */
+}
+
+.btn-add:hover .icon-plus {
+    transform: scale(1.2); /* Phóng to biểu tượng */
+}
+
+/* Khi nhấn vào nút */
+.btn-add:active {
+    transform: translateY(0); /* Quay lại trạng thái ban đầu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: Nút gọn hơn trên màn hình nhỏ */
+@media (max-width: 576px) {
+    .btn-add {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    .btn-add .icon-plus {
+        font-size: 1rem;
+        margin-right: 5px;
+    }
+}
